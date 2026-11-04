@@ -1,12 +1,12 @@
 /* Shared brand tokens. Change these after you agree on your brand direction.
    Both the storefront and the live style guide use this file. */
 :root {
-  --color-paper: #f6f5f0;
+  --color-paper: #f4f1e8;
   --color-ink: #171a18;
-  --color-muted: #5a615b;
-  --color-line: #d1d5cc;
-  --color-accent: #e3ef56;
-  --color-soft: #e8eae1;
+  --color-muted: #5b6060;
+  --color-line: #c9c6bc;
+  --color-accent: #c9d8ff;
+  --color-soft: #e5e4dc;
   --color-white: #fff;
   --color-danger: #992e28;
   --font-body:

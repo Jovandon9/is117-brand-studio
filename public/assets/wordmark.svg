@@ -1,4 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 52" role="img" aria-labelledby="title">
-  <title id="title">Neutral starter wordmark: Your Brand</title>
-  <text x="0" y="40" fill="#171a18" font-family="Arial, Helvetica, sans-serif" font-size="43" font-weight="700" letter-spacing="-1.6">YOUR BRAND</text>
+  <title id="title">ICED-T</title>
+  <text
+    x="0"
+    y="39"
+    fill="#171a18"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="38"
+    font-weight="800"
+    letter-spacing="2"
+  >ICED-T</text>
+  <rect x="0" y="47" width="171" height="3" rx="1.5" fill="#3457d5" />
 </svg>
