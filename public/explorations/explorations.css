@@ -1,0 +1,203 @@
+:root {
+  color-scheme: light;
+  font-family: Arial, Helvetica, sans-serif;
+
+  --paper: #f4f1e8;
+  --ink: #111;
+  --signal: #b9ff33;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.exploration {
+  min-height: 100vh;
+  padding: clamp(1rem, 3vw, 3rem);
+}
+
+.exploration-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  border-bottom: 1px solid currentcolor;
+}
+
+.exploration-header p,
+.hero-copy p,
+.hero-copy a,
+.annotations {
+  font-family: "Courier New", monospace;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(16rem, 0.9fr) minmax(18rem, 1.1fr);
+  align-items: center;
+  gap: clamp(2rem, 8vw, 8rem);
+  min-height: 70vh;
+}
+
+.shirt-frame {
+  position: relative;
+  width: min(100%, 38rem);
+  margin-inline: auto;
+}
+
+.shirt-frame img {
+  width: 100%;
+}
+
+.hero-copy {
+  max-width: 42rem;
+}
+
+.hero-copy h1 {
+  margin: 0;
+  font-size: clamp(3.2rem, 8vw, 8rem);
+  line-height: 0.85;
+}
+
+.hero-copy > p:not(.shared-support) {
+  margin: 2rem 0 0;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+}
+
+.shared-support {
+  max-width: 34rem;
+  margin: 1.5rem 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.shop-link {
+  display: inline-block;
+  padding: 0.85rem 1.15rem;
+  border: 1px solid currentcolor;
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.annotations {
+  border-top: 1px solid currentcolor;
+  padding-top: 1rem;
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+
+.modernist {
+  background:
+    linear-gradient(
+      to right,
+      transparent 49.9%,
+      rgb(17 17 17 / 8%) 50%,
+      transparent 50.1%
+    ),
+    var(--paper);
+}
+
+.modernist .exploration-header {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.modernist .hero {
+  grid-template-columns: 1fr 1fr;
+}
+
+.modernist h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.065em;
+  text-transform: uppercase;
+}
+
+.modernist .shared-support {
+  border-left: 0.35rem solid var(--ink);
+  padding-left: 1rem;
+}
+
+.modernist .shop-link {
+  border-radius: 0;
+}
+
+.postmodern {
+  --poster-blue: #1d48ff;
+
+  background: repeating-linear-gradient(
+    -9deg,
+    #f6f0df 0,
+    #f6f0df 26px,
+    #e5dcbf 27px,
+    #e5dcbf 28px
+  );
+}
+
+.postmodern .hero {
+  transform: rotate(-1deg);
+}
+
+.postmodern .shirt-frame {
+  transform: rotate(4deg) translate(-1rem, 1rem);
+  filter: drop-shadow(1.5rem 1.5rem 0 rgb(29 72 255 / 22%));
+}
+
+.postmodern h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 900;
+  letter-spacing: -0.08em;
+  text-transform: none;
+  text-shadow: 0.08em 0.08em 0 var(--signal);
+}
+
+.postmodern .hero-copy {
+  position: relative;
+  padding: 2rem;
+  background: rgb(246 240 223 / 92%);
+  outline: 1px solid var(--ink);
+  box-shadow: 0.6rem 0.6rem 0 var(--poster-blue);
+}
+
+.postmodern .shared-support {
+  font-weight: 700;
+}
+
+.postmodern .shop-link {
+  background: var(--ink);
+  color: var(--paper);
+  transform: rotate(2deg);
+}
+
+@media (width <= 720px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    min-height: auto;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(3rem, 16vw, 5rem);
+  }
+
+  .modernist .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .shirt-frame {
+    max-width: 28rem;
+  }
+}

@@ -9,6 +9,12 @@
   const bagStatus = document.querySelector("#bag-status");
   const bagItems = document.querySelector("#bag-items");
   const clearBag = document.querySelector("#clear-bag");
+  const stylingTipButton = document.querySelector("#styling-tip-button");
+  const stylingTip = document.querySelector("#styling-tip");
+  const effortlessLook = document.querySelector("#effortless-look");
+  const stylePreferenceMessage = document.querySelector(
+    "#style-preference-message",
+  );
   const sizes = ["S", "M", "L", "XL"];
   const bag = [];
 
@@ -57,5 +63,20 @@
     bagStatus.textContent =
       "Your demo bag is empty. Choose a size to try it again.";
     form.querySelector('input[name="size"]:checked')?.focus();
+  });
+
+  stylingTipButton.addEventListener("click", () => {
+    const isOpening = stylingTip.hidden;
+    stylingTip.hidden = !isOpening;
+    stylingTipButton.setAttribute("aria-expanded", String(isOpening));
+    stylingTipButton.textContent = isOpening
+      ? "Hide the free styling tip"
+      : "Reveal a free evening styling tip";
+  });
+
+  effortlessLook.addEventListener("change", () => {
+    stylePreferenceMessage.textContent = effortlessLook.checked
+      ? "For an effortless evening look, choose one simple outer layer, one clean shoe, and let the proportions feel natural."
+      : "A matching suggestion will appear when you choose the preference.";
   });
 })();

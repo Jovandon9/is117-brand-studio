@@ -2,23 +2,23 @@
 
 AI-drafted task evidence, not a transcript or grade. This file may be public: review, correct or remove excerpts before commit/push. Use short actual quotes or labeled paraphrases and disclose help. Approval alone is not an explanation; leave missing evidence pending.
 
-- **Feature:** BRAND-001 — pending
-- **Date:** Pending
-- **Conversation context available:** Not recorded yet
-- **Review status:** Not reviewed; no learner evidence recorded
+- **Feature:** BRAND-001 — in progress
+- **Date:** 2026-11-04
+- **Conversation context available:** Current chat; earlier setup conversation unavailable
+- **Review status:** Reviewed and approved by learner as accurate; learning gaps remain
 
 ## Student contributions
 
-| Checkpoint                                   | Actual student words or labeled paraphrase | Assistance supplied | Evidence or gap |
-| -------------------------------------------- | ------------------------------------------ | ------------------- | --------------- |
-| Choice and reason                            | Pending                                    | Pending             | Pending         |
-| Prediction or visitor benefit                | Pending                                    | Pending             | Pending         |
-| Interpretation of one actual test            | Pending                                    | Pending             | Pending         |
-| Browser observation and keep/revise decision | Pending                                    | Pending             | Pending         |
+| Checkpoint                                   | Actual student words or labeled paraphrase                                                                                                                                                                                                                                                                                                    | Assistance supplied                                                                                                                                                          | Evidence or gap                                                                                                                          |
+| -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Choice and reason                            | Selected a fashion-conscious man getting ready for a night out as the primary audience because the shirt should help him feel put-together for friends and events without looking try-hard.                                                                                                                                                   | AI proposed how to frame the audience and visitor need as hypotheses; no clues about product quality or fit were presented as facts.                                         | [SPEC.md](SPEC.md) records the hypothesis; issue [#2](https://github.com/Jovandon9/is117-brand-studio/issues/2) records the agreed scope |
+| Prediction or visitor benefit                | Before implementation, predicted that the Ruler-led, confident and effortless direction would make the visitor feel stylish, self-assured, and attracted to the idea of standing out without trying too hard.                                                                                                                                 | Assistance framed the expected effect as a prediction, not a customer research finding.                                                                                      | [SPEC.md](SPEC.md) records the prediction; evidence remains provisional until the page and visitor observation exist                     |
+| Interpretation of one actual test            | “It didn't fail so no bugs” after being shown the missing-size assertion.                                                                                                                                                                                                                                                                     | AI supplied the browser check and result: if no size were selected, add must leave the bag empty and show guidance. Helped clarify that this result tests only that journey. | [Browser test](tests/browser/studio.spec.js) covers the missing-size case; result: 10 browser checks passed                              |
+| Browser observation and keep/revise decision | The page looked clean, official, trustworthy, and “great for a demo,” though initially a little empty. The learner kept it and attributed the emptiness to the lack of photos and color, while noting nothing was cramped on narrow screens; keyboard navigation began at the top navigation, then proceeded through sizes to the bag action. | AI ran automated checks and asked for direct browser observations; automated accessibility/overflow checks do not establish brand fit.                                       | [Storefront](public/index.html) and [style guide](public/styleguide.html); 10 Chromium/axe checks passed; learner keep decision recorded |
 
 ## AI work and evidence links
 
-- **Work performed by AI:** Pending
-- **SPEC, issue/PR, actual checks and artifacts:** Pending
+- **Work performed by AI:** Installed Node.js 22, restored dependencies, fixed a Windows lint glob, installed Chromium, verified the baseline, created the feature branch, opened issue #2, and drafted these records.
+- **SPEC, issue/PR, actual checks and artifacts:** [SPEC.md](SPEC.md), issue [#2](https://github.com/Jovandon9/is117-brand-studio/issues/2), baseline check results recorded above.
 
-**Next step:** Pending
+**Next step:** Commit the approved record with the `BRAND-001` feature handoff, then open its student-repository pull request.
